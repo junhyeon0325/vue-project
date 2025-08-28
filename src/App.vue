@@ -4,7 +4,7 @@
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link> |
     <router-link to="/binding">Databinding</router-link>
-  </nav>
+  </nav>  
   <router-view />
 </template>
 
