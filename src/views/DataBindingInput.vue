@@ -55,6 +55,14 @@ export default {
       this.result = `${this.valueText} ${this.operator} ${this.valueNum} = ${this.result}`;
     },
   },
+  beforeUpdate() {
+    // 데이터가 바뀔때마다 훅이 호출됨
+    console.log("beforeUpdate");
+  },
+  updated() {
+    // 데이터가 바뀔때마다 훅이 호출됨
+    console.log("updated");
+  },
 };
 </script>
 

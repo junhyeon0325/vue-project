@@ -55,13 +55,30 @@ export default {
       prodList: [],
     };
   },
+  beforeCreate() {
+    console.log("beforeCreate");
+  },
+  created() {
+    console.log("created");
+  },
+  beforeMount() {
+    console.log("beforeMount");
+  },
+  beforeUpdate() {
+    // 데이터가 바뀔때마다 훅이 호출됨
+    console.log("beforeUpdate");
+  },
+  updated() {
+    // 데이터가 바뀔때마다 훅이 호출됨
+    console.log("updated");
+  },
   mounted() {
     // DataBindingList 컴포넌트가 생성이 되면
-    fetch("http://192.168.0.83:3000/products")
+    fetch("http://192.168.0.8:3000/products")
       .then((response) => response.json())
       .then((result) => {
         console.log(result);
-        this.prodList = result;
+        this.prodList = result; // 데이터 변경
       });
   },
 };
