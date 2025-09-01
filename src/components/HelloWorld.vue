@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <h1>{{ msg }}</h1> <!-- 데이터 바인딩 -->
     <p>
       For a guide and recipes on how to configure / customize this project,<br>
       check out the
@@ -33,7 +33,7 @@
 <script>
 export default {
   name: 'HelloWorld',
-  props: {
+  props: { // HomeView.vue에서 msg값을 전하고 있음. 받을때 요렇게 props를 써서 받아야 함
     msg: String
   }
 }
