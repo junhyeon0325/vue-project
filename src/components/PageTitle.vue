@@ -20,7 +20,7 @@
 
     <input v-model="name" />
     <input type="text" v-model="age" />
-    <button @click="callParentEvent">call parent event</button>
+    <button @click="callParentEvent">call parent event</button> <!-- 여기서 클릭하면 callParentEvent함수 실행 -->
   </div>
 </template>
 
@@ -33,7 +33,8 @@ export default {
       age: 0,
     };
   },
-  props: {
+  props: { // 이렇게 상위 컴포넌트로 부터 값을 받을때는 props를 써야한다
+    // 형태는 
     title: { type: String, default: "Default Title" }, // 문자열
     likes: { type: Number, default: 0 }, // 숫자
     isOK: { type: Boolean, default: false }, // 불리언타입
